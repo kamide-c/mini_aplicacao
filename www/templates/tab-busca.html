@@ -1,4 +1,7 @@
 <ion-view view-title="Buscas">
+  <ion-nav-buttons side="primary">
+    <button class="button button-icon icon ion-ios-minus-outline" ng-click="data.showDelete = !data.showDelete;"></button>
+  </ion-nav-buttons>
   <div class="bar bar-subheader bar-light has-header item-input-inset">
     <label class="item-input-wrapper">
       <i class="icon ion-ios-search placeholder-icon"></i>
@@ -9,6 +12,11 @@
     </button>
   </div>
   <ion-content class="has-subheader">
-    <ion-item ng-repeat="item in itens">Hello!</ion-item>
+    <ion-list show-delete="data.showDelete">
+        <ion-item ng-repeat="item in items">
+          <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(item)"></ion-delete-button>
+            Hello, list item!
+        </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
