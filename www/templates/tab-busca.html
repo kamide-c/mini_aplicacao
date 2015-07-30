@@ -15,7 +15,7 @@
     <ion-list show-delete="data.showDelete">
         <ion-item ng-repeat="item in items">
           <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(item)"></ion-delete-button>
-            {{item.address}}
+            {{item.address | limitTo:numLimit}}
         </ion-item>
     </ion-list>
   </ion-content>

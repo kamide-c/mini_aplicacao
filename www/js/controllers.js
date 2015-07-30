@@ -2,6 +2,7 @@ angular.module('starter.controllers', [])
 
 .controller('BuscaCtrl', function($scope, $rootScope, RestService) {
 	$rootScope.items = [];
+	$scope.numLimit = 5;
 
 	$scope.busca = {
 		email: ''
