@@ -2,13 +2,13 @@
   <div class="bar bar-subheader bar-light has-header item-input-inset">
     <label class="item-input-wrapper">
       <i class="icon ion-ios-search placeholder-icon"></i>
-      <input type="search" placeholder="Pesquisar">
+      <input type="search" placeholder="Pesquisar" ng-model="busca.email">
     </label>
-    <button class="button button-clear">
+    <button class="button button-clear" ng-click="buscar()">
       Ok
     </button>
   </div>
   <ion-content class="has-subheader">
-    <ion-item>Hello!</ion-item>
+    <ion-item ng-repeat="item in itens">Hello!</ion-item>
   </ion-content>
 </ion-view>
